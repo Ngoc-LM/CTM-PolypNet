@@ -4,7 +4,11 @@
 
 > Minh-Ngoc Luong, Minh Le, Van-Truong Pham, Thi-Thao Tran  
 > *2025 2nd International Conference on Health Science and Technology (ICHST)*  
-> DOI: [10.1109/ICHST66555.2025.11428431](https://doi.org/10.1109/ICHST66555.2025.11428431)
+> DOI: [10.1109/ICHST66555.2025.11428431
+        
+        ](https://doi.org/10.1109/ICHST66555.2025.11428431
+        
+        )
 
 ---
 
@@ -21,15 +25,6 @@ CTM-PolypNet integrates three complementary paradigms in a U-Net-style architect
 | **CBAM / CoordAtt / SE** | Channel and spatial recalibration on skip connections |
 | **Deep supervision** | Weighted Dice-Tversky loss at all 4 decoder stages |
 
-### Results
-
-| Dataset | DSC | IoU |
-|---------|-----|-----|
-| Kvasir-SEG *(seen)* | 0.939 | 0.896 |
-| CVC-ClinicDB *(seen)* | 0.942 | 0.896 |
-| ETIS *(unseen)* | 0.802 | 0.689 |
-| CVC-ColonDB *(unseen)* | 0.818 | 0.725 |
-| CVC-300 *(unseen)* | 0.905 | 0.833 |
 
 ---
 
@@ -72,20 +67,6 @@ pip install -r requirements.txt
 
 ---
 
-## Data Preparation
-
-The training code expects a single `.npz` archive with the following keys:
-
-| Key | Shape | Description |
-|-----|-------|-------------|
-| `train_img` | (N, H, W, 3) | Training images (uint8) |
-| `train_msk` | (N, H, W, 1) | Training masks (uint8) |
-| `val_img` / `val_msk` | … | Validation split |
-| `test_kvasir_img/msk` | … | Kvasir-SEG test set |
-| `test_etis_img/msk` | … | ETIS test set |
-| `test_cvc300_img/msk` | … | CVC-300 (EndoScene) test set |
-| `test_clinic_img/msk` | … | CVC-ClinicDB test set |
-| `test_colon_img/msk` | … | CVC-ColonDB test set |
 
 Raw datasets are available from:
 - [Kvasir-SEG](https://datasets.simula.no/kvasir-seg/)
@@ -114,7 +95,7 @@ python train.py \
 Resume from a checkpoint:
 
 ```bash
-python train.py ... --ckpt_path checkpoints/ckpt0.9392.ckpt
+python train.py ... --ckpt_path checkpoints/ckpt0.XXXX.ckpt
 ```
 
 ---
@@ -124,7 +105,7 @@ python train.py ... --ckpt_path checkpoints/ckpt0.9392.ckpt
 ```bash
 python evaluate.py \
     --data_path  /path/to/polypData.npz \
-    --ckpt_path  checkpoints/ckpt0.9392.ckpt \
+    --ckpt_path  checkpoints/ckpt0.XXXX.ckpt \
     --pretrained_backbone  weights/pvt_v2_b2.pth
 ```
 
@@ -136,28 +117,25 @@ python evaluate.py \
 python profile_model.py --pretrained_backbone weights/pvt_v2_b2.pth
 ```
 
-Expected output: **43.9 M parameters**, **8.70 GFLOPs** (256 × 256 input).
 
 ---
 
 ## Citation
 
 ```bibtex
-@inproceedings{luong2025ctmpolypnet,
-  title     = {{CTM-PolypNet}: A Unified Convolution-Transformer-Mamba Model for Polyp Segmentation},
-  author    = {Luong, Minh-Ngoc and Le, Minh and Pham, Van-Truong and Tran, Thi-Thao},
-  booktitle = {2025 2nd International Conference on Health Science and Technology (ICHST)},
-  year      = {2025},
-  doi       = {10.1109/ICHST66555.2025.11428431}
+@inproceedings{luong2025ctm,
+  title={CTM-PolypNet: A Unified Convolution-Transformer-Mamba Model for Polyp Segmentation},
+  author={Luong, Minh-Ngoc and Le, Minh and Pham, Van-Truong and Tran, Thi-Thao},
+  booktitle={2025 2nd International Conference on Health Science and Technology (ICHST)},
+  pages={1--6},
+  year={2025},
+  organization={IEEE}
 }
 ```
 
 ---
 
 ## Acknowledgements
-
-This research is funded by the Vietnam National Foundation for Science and Technology
-Development (NAFOSTED) under grant number 102.05-2021.34.
 
 The backbone code is adapted from the official
 [PVT-v2 repository](https://github.com/whai362/PVT).
