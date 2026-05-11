@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Jupyter / Colab artifacts
+.ipynb_checkpoints/
+*.ipynb
+
+# Data & weights (large binary files — track with Git LFS or store externally)
+weights/
+data/*.npz
+data/*.pth
+
+# Checkpoints & logs
+checkpoints/
+lightning_logs/
+*.ckpt
+*.pth
+*.pt
+
+# OS
+.DS_Store
+Thumbs.db
