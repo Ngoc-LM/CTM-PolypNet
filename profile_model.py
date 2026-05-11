@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 """
 Model complexity analysis: parameter count and FLOPs.
 
