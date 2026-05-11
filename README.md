@@ -53,7 +53,7 @@ CTM-PolypNet/
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/CTM-PolypNet.git
+git clone https://github.com/Ngoc-LM/CTM-PolypNet.git
 cd CTM-PolypNet
 pip install -r requirements.txt
 ```
