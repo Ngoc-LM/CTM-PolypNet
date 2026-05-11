@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 """
 Evaluation script for CTM-PolypNet.
 
