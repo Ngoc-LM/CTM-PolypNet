@@ -4,9 +4,7 @@
 
 > Minh-Ngoc Luong, Minh Le, Van-Truong Pham, Thi-Thao Tran  
 > *2025 2nd International Conference on Health Science and Technology (ICHST)*  
-> DOI: [10.1109/ICHST66555.2025.11428431
-        
-        ]
+> DOI: [10.1109/ICHST66555.2025.11428431]
 
 ---
 
