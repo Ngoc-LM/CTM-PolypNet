@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Loss functions and evaluation metrics for CTM-PolypNet.
 
